@@ -132,7 +132,10 @@ template <class T>
 int LinkedList<T>::operator[](int index){
 	int counter=0;
 	LinkedListNode *node=new LinkedListNode;
+	LinkedListNode testNode;
 	node=head;
+	testNode.next=head;
+	cout<<endl<<"gfhfghfgh:"<<testNode.next->value<<endl;
 	while (counter<index)
 	{
 		/* code */
