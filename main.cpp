@@ -1,26 +1,20 @@
 
 #include <iostream>
+#include "stack.cpp"
 
 int main(){
-    int realValue=5;
-    int *pointerToValue=&realValue;
-    std::cout<<realValue<<"\n";
-    std::cout<<"Pointer value:"<<pointerToValue<<"\n";
-    std::cout<<"Get value through pointer:"<<*pointerToValue<<"\n";
-    std::cout<<"Pointer of value:"<<&realValue<<"\n";
-
-    std::cout<<"After change value"<<"\n";
-    realValue+=1;
-    std::cout<<realValue<<"\n";
-    std::cout<<"Pointer value:"<<pointerToValue<<"\n";
-    std::cout<<"Get value through pointer:"<<*pointerToValue<<"\n";
-    std::cout<<"Pointer of value:"<<&realValue<<"\n";
-
-    std::cout<<"Changing by using pointer"<<"\n";
-    *pointerToValue+=7;
-    std::cout<<realValue<<"\n";
-    std::cout<<"Pointer value:"<<pointerToValue<<"\n";
-    std::cout<<"Get value through pointer:"<<*pointerToValue<<"\n";
-    std::cout<<"Pointer of value:"<<&realValue<<"\n";
+    Stack<int> stack(10);
+    bool checkFull=stack.isFull();
+    bool checkEmpty=stack.isEmpty();
+    cout<<checkEmpty<<"/"<<checkFull;
+    int size=stack.size();
+    cout<<"asdasdasdasdasdasd";
+    cout<<size;
+    stack.push(2);
+    stack.push(3);
+    stack.push(4);
+    stack.push(5);
+    stack.push(7);
+    stack.push(5);
 	return 0;
 }
